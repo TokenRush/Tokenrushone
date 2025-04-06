@@ -1,66 +1,63 @@
-<section id="live-tokens">
-  <h2>Live Tokens</h2>
-  <div class="token-card">
-    <img src="https://via.placeholder.com/40" alt="Token Logo">
-    <div class="token-info">
-      <h3>PepeKing</h3>
-      <p>Symbol: $PEPEK</p>
-      <p>Market Cap: $123K</p>
-      <p>Launched: 10 mins ago</p>
+<section class="trending-tokens">
+  <h2>Trending Tokens</h2>
+  <div class="token-cards">
+    <div class="token-card">
+      <h3>TRND</h3>
+      <p>Trending Rocket</p>
+      <a href="#">View</a>
     </div>
-    <a href="#" class="view-btn">View</a>
-  </div>
-  <div class="token-card">
-    <img src="https://via.placeholder.com/40" alt="Token Logo">
-    <div class="token-info">
-      <h3>DogeVibe</h3>
-      <p>Symbol: $DVIBE</p>
-      <p>Market Cap: $87K</p>
-      <p>Launched: 5 mins ago</p>
+    <div class="token-card">
+      <h3>MOON</h3>
+      <p>MoonHype Coin</p>
+      <a href="#">View</a>
     </div>
-    <a href="#" class="view-btn">View</a>
+    <div class="token-card">
+      <h3>FIRE</h3>
+      <p>Fire Meme</p>
+      <a href="#">View</a>
+    </div>
   </div>
 </section>
-<style>
-  #live-tokens {
-    margin-top: 60px;
-  }
+.trending-tokens {
+  padding: 50px 20px;
+  background: #0d0d0d;
+  text-align: center;
+}
 
-  #live-tokens h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
+.trending-tokens h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #00ffd1;
+}
 
-  .token-card {
-    display: flex;
-    align-items: center;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
+.trending-tokens .token-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-  .token-card img {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-  }
+.trending-tokens .token-card {
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 25px;
+  width: 240px;
+  color: #fff;
+}
 
-  .token-info {
-    flex: 1;
-    text-align: left;
-  }
+.trending-tokens .token-card h3 {
+  font-size: 24px;
+  color: #ffd700;
+}
 
-  .view-btn {
-    background: #00ff99;
-    color: #000;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+.trending-tokens .token-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
 
-  .view-btn:hover {
-    background: #00cc7a;
-  }
-</style>
+.trending-tokens .token-card a {
+  color: #00ffd1;
+  text-decoration: none;
+  font-weight: bold;
+}
