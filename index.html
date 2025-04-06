@@ -7,42 +7,49 @@
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: #fff;
+      background: linear-gradient(135deg, #000000, #1f1f1f);
+      color: white;
+      text-align: center;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
-      flex-direction: column;
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 3rem;
       margin-bottom: 10px;
-      background: linear-gradient(to right, #00ffa3, #dc1fff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     p {
-      font-size: 20px;
-      color: #aaa;
-      max-width: 500px;
-      margin: 0 auto;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
     }
 
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      color: black;
+      background-color: #00FFB2;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #00e0a0;
     }
   </style>
 </head>
 <body>
-  <img src="favicon-32x32.png" alt="TokenRush Logo" class="logo" />
-  <h1>Welcome to TokenRush</h1>
-  <p>The next-gen meme token launch platform on Solana.</p>
+  <h1>Launch Meme Tokens Instantly</h1>
+  <p>Create, deploy and list your tokens on Solana in just a click. Welcome to the future of meme coin launches.</p>
+  <a href="#" class="cta-button">Launch Your Token</a>
 </body>
 </html>
