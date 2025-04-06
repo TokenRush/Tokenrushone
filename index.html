@@ -1,64 +1,66 @@
-<section class="trending-section">
-  <h2>Trending Now</h2>
-  <div class="token-cards">
-    <div class="token-card">
-      <img src="favicon-32x32.png" alt="Token Logo" />
-      <h3>$BOLT</h3>
-      <p>Volume: $23K</p>
-      <a href="#">View</a>
+<section id="live-tokens">
+  <h2>Live Tokens</h2>
+  <div class="token-card">
+    <img src="https://via.placeholder.com/40" alt="Token Logo">
+    <div class="token-info">
+      <h3>PepeKing</h3>
+      <p>Symbol: $PEPEK</p>
+      <p>Market Cap: $123K</p>
+      <p>Launched: 10 mins ago</p>
     </div>
-    <div class="token-card">
-      <img src="favicon-32x32.png" alt="Token Logo" />
-      <h3>$ZOOM</h3>
-      <p>Volume: $18K</p>
-      <a href="#">View</a>
+    <a href="#" class="view-btn">View</a>
+  </div>
+  <div class="token-card">
+    <img src="https://via.placeholder.com/40" alt="Token Logo">
+    <div class="token-info">
+      <h3>DogeVibe</h3>
+      <p>Symbol: $DVIBE</p>
+      <p>Market Cap: $87K</p>
+      <p>Launched: 5 mins ago</p>
     </div>
-    <!-- Add more cards as needed -->
+    <a href="#" class="view-btn">View</a>
   </div>
 </section>
-.trending-section {
-  background: #111;
-  padding: 60px 20px;
-  text-align: center;
-  color: #fff;
-}
+<style>
+  #live-tokens {
+    margin-top: 60px;
+  }
 
-.trending-section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+  #live-tokens h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
 
-.token-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+  .token-card {
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
 
-.token-card {
-  background: #1e1e1e;
-  padding: 20px;
-  width: 200px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
+  .token-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 
-.token-card:hover {
-  transform: translateY(-5px);
-}
+  .token-info {
+    flex: 1;
+    text-align: left;
+  }
 
-.token-card img {
-  width: 50px;
-  height: 50px;
-}
+  .view-btn {
+    background: #00ff99;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-.token-card h3 {
-  margin: 10px 0 5px;
-}
-
-.token-card a {
-  color: #00f0ff;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-}
+  .view-btn:hover {
+    background: #00cc7a;
+  }
+</style>
