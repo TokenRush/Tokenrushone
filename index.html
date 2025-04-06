@@ -1,64 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TokenRush</title>
-  <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.js"></script>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #00ffae;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 30px;
-    }
-    #walletAddress {
-      margin-top: 15px;
+<section style="text-align: center; padding: 60px 20px; background-color: #111;">
+  <h2 style="font-size: 32px; color: #00FFB3; margin-bottom: 15px;">
+    Launch Your Token Instantly
+  </h2>
+  <p style="color: #ccc; font-size: 18px; margin-bottom: 30px;">
+    No coding required. One-click deploy on Solana.
+  </p>
+  <a href="#" style="
+      background-color: #00FFB3;
+      padding: 12px 28px;
+      border-radius: 6px;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
       font-size: 16px;
-      color: #ccc;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to TokenRush</h1>
-  <p>Launch Meme Tokens Instantly on Solana!</p>
-
-  <button id="connectWalletBtn">Connect Phantom Wallet</button>
-  <p id="walletAddress"></p>
-
-  <script>
-    const connectWalletBtn = document.getElementById("connectWalletBtn");
-    const walletAddressDisplay = document.getElementById("walletAddress");
-
-    connectWalletBtn.addEventListener("click", async () => {
-      if (window.solana && window.solana.isPhantom) {
-        try {
-          const resp = await window.solana.connect();
-          walletAddressDisplay.innerText = `Wallet: ${resp.publicKey.toString()}`;
-        } catch (err) {
-          console.error("Wallet connection failed:", err);
-        }
-      } else {
-        alert("Phantom Wallet not found. Please install it from https://phantom.app");
-      }
-    });
-  </script>
-</body>
-</html>
+    ">Start Now</a>
+</section>
