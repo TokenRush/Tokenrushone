@@ -1,13 +1,64 @@
-<a href="#launch-section" style="padding: 12px 20px; background-color: #fff; color: #000; text-decoration: none; font-weight: bold;">
-  Launch Your Token
-</a><!-- 
-<!-- Token Creation Form Section -->
-<section id="launch-section" style="padding: 100px 20px; background-color: #111; color: white;">
-  <h2 style="font-size: 36px; margin-bottom: 20px;">Create Your Meme Token</h2>
-  <form>
-    <input type="text" placeholder="Token Name" required style="padding: 10px; margin: 10px;" />
-    <input type="text" placeholder="Token Symbol" required style="padding: 10px; margin: 10px;" />
-    <input type="number" placeholder="Total Supply" required style="padding: 10px; margin: 10px;" />
-    <button type="submit" style="padding: 12px 20px; margin-top: 20px;">Deploy Token</button>
-  </form>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TokenRush</title>
+  <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.js"></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #00ffae;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+    #walletAddress {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to TokenRush</h1>
+  <p>Launch Meme Tokens Instantly on Solana!</p>
+
+  <button id="connectWalletBtn">Connect Phantom Wallet</button>
+  <p id="walletAddress"></p>
+
+  <script>
+    const connectWalletBtn = document.getElementById("connectWalletBtn");
+    const walletAddressDisplay = document.getElementById("walletAddress");
+
+    connectWalletBtn.addEventListener("click", async () => {
+      if (window.solana && window.solana.isPhantom) {
+        try {
+          const resp = await window.solana.connect();
+          walletAddressDisplay.innerText = `Wallet: ${resp.publicKey.toString()}`;
+        } catch (err) {
+          console.error("Wallet connection failed:", err);
+        }
+      } else {
+        alert("Phantom Wallet not found. Please install it from https://phantom.app");
+      }
+    });
+  </script>
+</body>
+</html>
