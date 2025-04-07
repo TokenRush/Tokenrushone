@@ -45,3 +45,38 @@ body {
 .header-buttons button:hover {
   background-color: #e65100;
 }
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  color: #ff5e00;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff5e00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #e65100;
+}
