@@ -115,3 +115,39 @@ body {
 .search-btn:hover {
   background-color: #e65100;
 }
+/* Trending Section */
+.trending-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.trending-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff5e00;
+}
+
+.token-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.token-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #ff5e00;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.token-card:hover {
+  transform: scale(1.05);
+  background-color: #262626;
+}
