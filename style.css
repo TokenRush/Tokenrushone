@@ -67,3 +67,26 @@ body {
   background: #ff5ec4;
   color: #0d0d0d;
 }
+.navbar {
+  background-color: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #00fff0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.navbar a:hover {
+  color: #00ff88;
+}
