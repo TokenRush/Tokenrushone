@@ -151,3 +151,38 @@ body {
   transform: scale(1.05);
   background-color: #262626;
 }
+.trending-tokens {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.token-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.token-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.token-card:hover {
+  transform: scale(1.05);
+}
+
+.token-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ff5e00;
+}
+
+.token-card .token-price {
+  font-size: 16px;
+  color: #00ffcc;
+}
