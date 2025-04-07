@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Token</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="create-token.html">Create Token</a>
+      <a href="community.html">Community</a>
+    </nav>
+  </header>
+
+  <main class="create-token-page">
+    <h1>Create Your Meme Token</h1>
+    <form id="tokenForm">
+      <label>Token Name</label>
+      <input type="text" placeholder="e.g. DogeKing" required />
+
+      <label>Token Ticker</label>
+      <input type="text" placeholder="e.g. DOGEK" required />
+
+      <label>Token Description</label>
+      <textarea placeholder="What’s your token about?" required></textarea>
+
+      <label>Upload Image / Video</label>
+      <input type="file" accept="image/*,video/*" />
+
+      <details>
+        <summary>Show more options</summary>
+        <input type="text" placeholder="Extra settings here..." />
+      </details>
+
+      <button type="submit">Create Coin</button>
+    </form>
+  </main>
+</body>
+</html>
