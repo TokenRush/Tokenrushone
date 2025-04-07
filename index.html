@@ -1,67 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Trending Tokens</title>
-  <style>
-    .trending-tokens {
-      padding: 50px 20px;
-      background: #0d0d0d;
-      text-align: center;
-    }
-    .trending-tokens h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-      color: #00ffd1;
-    }
-    .trending-tokens .token-cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .trending-tokens .token-card {
-      background-color: #111;
-      border: 1px solid #444;
-      border-radius: 10px;
-      padding: 25px;
-      width: 240px;
-      color: #fff;
-    }
-    .trending-tokens .token-card h3 {
-      font-size: 24px;
-      color: #ffd700;
-    }
-    .trending-tokens .token-card p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    .trending-tokens .token-card a {
-      color: #00ffd1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TokenRush - Launch Meme Tokens Instantly</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <section class="trending-tokens">
-    <h2>Trending Tokens</h2>
-    <div class="token-cards">
-      <div class="token-card">
-        <h3>TRND</h3>
-        <p>Trending Rocket</p>
-        <a href="#">View</a>
-      </div>
-      <div class="token-card">
-        <h3>MOON</h3>
-        <p>MoonHype Coin</p>
-        <a href="#">View</a>
-      </div>
-      <div class="token-card">
-        <h3>FIRE</h3>
-        <p>Fire Meme</p>
-        <a href="#">View</a>
-      </div>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner">
+    Trending: $DOGE2, $MOON, $RUSH – Join the Meme Revolution!
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">TokenRush</div>
+    <div class="header-buttons">
+      <button class="login-btn">Login</button>
+      <button class="create-btn">Create</button>
     </div>
-  </section>
+  </header>
+
 </body>
 </html>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+/* Notification Banner */
+.notification-banner {
+  background-color: #ff5e00;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff5e00;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5e00;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.header-buttons button:hover {
+  background-color: #e65100;
+}
