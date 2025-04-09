@@ -1,79 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TokenRush</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
-    }
-    header {
-      background-color: #1e1e1e;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      color: #00ffcc;
-      margin: 0;
-    }
-    nav a {
-      color: #ffffff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .hero h2 {
-      font-size: 3em;
-      color: #00ffcc;
-    }
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 20px;
-      color: #bbbbbb;
-    }
-    .cta-button {
-      margin-top: 40px;
-      padding: 15px 30px;
-      background-color: #00ffcc;
-      border: none;
-      font-size: 1em;
-      color: #000000;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
+  <title>TokenRush - Pump.fun Clone</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+  <!-- Live Buy Banner -->
+  <div class="banner">H3VA2u bought 0.0920 SOL of DARK</div>
+
+  <!-- Header -->
   <header>
     <h1>TokenRush</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Launch</a>
-      <a href="#">Tokens</a>
-    </nav>
+    <div class="header-buttons">
+      <button class="btn create-btn">Create Coin</button>
+      <button class="btn login-btn">Log In</button>
+    </div>
   </header>
 
-  <div class="hero">
-    <h2>Launch Meme Tokens Instantly</h2>
-    <p>Create, deploy and list your tokens on Solana in just a click.</p>
-    <button class="cta-button">Launch Your Token</button>
+  <!-- Search -->
+  <div class="search-container">
+    <input type="text" placeholder="Search tokens..." class="search-input"/>
   </div>
+
+  <!-- Trending Section -->
+  <section class="trending">
+    <h2>Trending Tokens</h2>
+    <div class="token-list">
+      <div class="token-card">
+        <img src="https://via.placeholder.com/60" alt="Token">
+        <div class="token-info">
+          <h3>Dark Eclipse (DARK)</h3>
+          <p>Market Cap: $3.3M</p>
+          <p>Replies: 428</p>
+        </div>
+      </div>
+      <!-- Add more token-card divs here -->
+    </div>
+  </section>
+
+  <!-- Bottom Nav Bar -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item active">Home</a>
+    <a href="create.html" class="nav-item">+</a>
+    <a href="community.html" class="nav-item">Chart</a>
+    <a href="#" class="nav-item">More</a>
+  </nav>
 
 </body>
 </html>
-<a href="create-token.html">
-  <button class="launch-button">Launch Your Token</button>
-</a>
