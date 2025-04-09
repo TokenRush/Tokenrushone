@@ -1,1 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
 
+.banner {
+  background-color: #00ff99;
+  color: #000;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #111;
+  align-items: center;
+}
+
+.header-buttons .btn {
+  margin-left: 10px;
+  padding: 8px 15px;
+  background-color: #00ff99;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.search-container {
+  padding: 15px;
+  text-align: center;
+}
+
+.search-input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.trending {
+  padding: 20px;
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.token-card {
+  background-color: #1a1a1a;
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.token-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.token-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.token-info p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-item.active {
+  color: #00ff99;
+  font-weight: bold;
+}
