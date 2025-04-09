@@ -108,5 +108,51 @@ header {
   margin-bottom: 10px;
   color: white;
 }
+.trending-section {
+  padding: 20px;
+  background-color: #0f0f0f;
+  color: white;
+}
 
+.trending-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.token-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.token-card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.token-card:hover {
+  transform: scale(1.05);
+}
+
+.token-logo {
+  border-radius: 50%;
+  background-color: #2a2a2a;
+}
+
+.token-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.token-info span {
+  color: #aaa;
+  font-weight: normal;
+  font-size: 14px;
+}
 
