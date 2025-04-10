@@ -109,3 +109,19 @@ header {
   border-radius: 5px;
   margin-top: 5px;
 }
+
+.login-btn {
+  background-color: #00ff9f;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #00e68a;
+}
