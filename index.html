@@ -42,16 +42,22 @@
   </section>
 
   <!-- Bottom Nav Bar -->
-  <div class="footer">
-  <a href="index.html">Home</a>
-  <button onclick="window.location.href='create-token.html'">Create Token</button>
-  <a href="chart.html">Chart</a>
-  <a href="#">More</a>
-</div>
+  <form onsubmit="handleCreateToken(event)">
+  <!-- tumcha form elements -->
+  <button type="submit">Create Token</button>
+</form>
 
-</body>
-</html>
+<script>
+  function handleCreateToken(e) {
+    e.preventDefault(); // Form submit honyapasun thambavto
 
+    // Dummy validation or save logic
+    alert("Token created!");
+
+    // Redirect to another page after creating
+    window.location.href = "chart.html"; // tumhi jar dusra page pahije tar tithe theva
+  }
+</script>
   <!-- Shiba Inu -->
   <div class="token-card" style="display: flex; align-items: center; background-color: #1a1a1a; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
     <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE/logo.png" alt="Shiba Inu Logo" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;" />
