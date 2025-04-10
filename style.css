@@ -100,3 +100,12 @@ header {
   font-weight: bold;
 }
 
+.input-field {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
