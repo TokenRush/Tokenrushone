@@ -122,3 +122,15 @@
 <p id="toggle-options" style="color: #4ea1f3; cursor: pointer; text-align: center; margin-top: 10px;">
   show more options ↓
 </p>
+
+<script>
+  const toggleBtn = document.getElementById("toggle-options");
+  const moreOptions = document.getElementById("more-options");
+  let isVisible = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isVisible = !isVisible;
+    moreOptions.style.display = isVisible ? "block" : "none";
+    toggleBtn.innerText = isVisible ? "hide more options ↑" : "show more options ↓";
+  });
+</script>
