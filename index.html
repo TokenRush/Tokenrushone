@@ -4,154 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TokenRush - Pump.fun Clone</title>
-  <link rel="stylesheet" href="style.css"/>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #000;
+      background-color: #0e0e0e;
       color: white;
     }
 
+    /* Top Buy Banner */
     .banner {
-      background-color: #008000;
-      color: white;
+      background-color: #00FF99;
+      color: black;
       text-align: center;
-      padding: 8px;
+      padding: 10px;
       font-weight: bold;
     }
 
+    /* Header */
     header {
-      background-color: #003300;
-      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 15px;
     }
 
     header h1 {
+      font-size: 24px;
       margin: 0;
-      color: #00ff99;
     }
 
-    .header-buttons .btn {
-      background-color: #00ff99;
-      border: none;
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background-color: #00FF99;
       color: black;
-      padding: 8px 12px;
-      margin-left: 10px;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
-      border-radius: 4px;
+    }
+
+    /* Trending Green Heading */
+    .trending-heading {
+      background-color: #00FF99;
+      color: black;
+      padding: 10px;
+      font-size: 18px;
       font-weight: bold;
     }
 
-    .search-container {
-      padding: 10px 20px;
-    }
-
-    .search-input {
-      width: 100%;
+    /* Token list */
+    .token-list {
       padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .trending {
-      padding: 10px 20px;
-    }
-
-    .trending h2 {
-      color: #00ff99;
     }
 
     .token-card {
-      display: flex;
-      align-items: center;
-      background-color: #111;
+      background-color: #1a1a1a;
+      border-radius: 10px;
       padding: 10px;
       margin-bottom: 10px;
-      border-radius: 5px;
+      display: flex;
+      align-items: center;
     }
 
     .token-card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      margin-right: 10px;
     }
 
+    .token-info h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .token-info p {
+      margin: 2px 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    /* Bottom Navigation */
     .bottom-nav {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #003300;
+      background-color: #181a1b;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       padding: 10px 0;
+      border-top: 1px solid #333;
     }
 
-    .bottom-nav .nav-item {
+    .nav-item {
+      text-align: center;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .bottom-nav .nav-item.active {
-      color: #00ff99;
-    }
-
-    .floating-btn {
-      position: fixed;
-      bottom: 60px;
-      right: 20px;
-      background-color: #00ff99;
-      color: black;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
       font-size: 24px;
-      cursor: pointer;
     }
+
+    .nav-item img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .green-icon {
+      filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="banner">H3VA2u bought 0.0920 SOL of DARK</div>
+  <!-- Buy Banner -->
+  <div class="banner">
+    H3VA2u bought 0.0920 SOL of DARK
+  </div>
 
+  <!-- Header -->
   <header>
     <h1>TokenRush</h1>
     <div class="header-buttons">
-      <button class="btn" onclick="window.location.href='create-token.html'">Create Coin</button>
+      <button class="btn">Create Token</button>
       <button class="btn">Log In</button>
     </div>
   </header>
 
-  <div class="search-container">
-    <input type="text" placeholder="Search tokens..." class="search-input"/>
-  </div>
+  <!-- Trending Tokens Heading -->
+  <div class="trending-heading">Trending Tokens</div>
 
-  <section class="trending">
-    <h2>Trending Tokens</h2>
-    <div class="token-list">
-      <div class="token-card">
-        <img src="https://via.placeholder.com/60" alt="Token">
-        <div class="token-info">
-          <h3>Dark Eclipse (DARK)</h3>
-          <p>Market Cap: $3.3M</p>
-          <p>Replies: 428</p>
-        </div>
+  <!-- Token Cards -->
+  <div class="token-list">
+    <div class="token-card">
+      <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.png" alt="Shiba">
+      <div class="token-info">
+        <h3>Shiba Inu (SHIB)</h3>
+        <p>Market Cap: $6.8B</p>
+        <p>Replies: 1520</p>
       </div>
     </div>
-  </section>
+    <!-- Add more tokens if needed -->
+  </div>
 
-  <button class="floating-btn" onclick="window.location.href='create-token.html'">+</button>
-
+  <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav">
-    <a href="index.html" class="nav-item active">Home</a>
-    <a href="create-token.html" class="nav-item">+</a>
-    <a href="community.html" class="nav-item">Chart</a>
-    <a href="#" class="nav-item">More</a>
+    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home" /></div>
+    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="Create" /></div>
+    <div class="nav-item"><img class="green-icon" src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart--v1.png" alt="Chart" /></div>
+    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/menu-2.png" alt="More" /></div>
   </nav>
 
 </body>
