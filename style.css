@@ -100,16 +100,3 @@ header {
   font-weight: bold;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #121212;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  font-weight: bold;
-  z-index: 100;
-}
-
