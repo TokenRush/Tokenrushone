@@ -103,3 +103,41 @@
   </div>
 </body>
 </html>
+
+<div style="max-width: 600px; margin: 40px auto; padding: 20px; background-color: #121212; border-radius: 10px; color: white;">
+  <h2 style="text-align: center; color: #00FF00;">Create Your Token</h2>
+
+  <label>Token Name</label>
+  <input type="text" id="tokenName" placeholder="Enter token name" oninput="updatePreview()" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: none;" />
+
+  <label>Symbol</label>
+  <input type="text" id="tokenSymbol" placeholder="e.g. PUMP" oninput="updatePreview()" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: none;" />
+
+  <label>Upload Logo</label>
+  <input type="file" id="tokenLogo" accept="image/*" onchange="previewImage(event)" style="width: 100%; margin-bottom: 20px;" />
+
+  <hr style="border-color: #333; margin: 20px 0;" />
+
+  <h3 style="color: #00FF00;">Live Preview</h3>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img id="logoPreview" src="https://via.placeholder.com/40" style="width: 40px; height: 40px; border-radius: 5px;" />
+    <div>
+      <strong id="previewName">Token Name</strong>
+      <div id="previewSymbol" style="font-size: 14px;">(SYMBOL)</div>
+    </div>
+  </div>
+
+  <button style="margin-top: 30px; width: 100%; background-color: #00FF00; color: black; font-weight: bold; padding: 12px; border: none; border-radius: 5px;">Create Token</button>
+</div>
+
+<script>
+  function updatePreview() {
+    document.getElementById('previewName').textContent = document.getElementById('tokenName').value || 'Token Name';
+    document.getElementById('previewSymbol').textContent = '(' + (document.getElementById('tokenSymbol').value || 'SYMBOL') + ')';
+  }
+
+  function previewImage(event) {
+    const output = document.getElementById('logoPreview');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  }
+</script>
