@@ -99,3 +99,25 @@ header {
   color: #00ff99;
   font-weight: bold;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #00ffcc;
+}
