@@ -3,161 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TokenRush - Pump.fun Clone</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: white;
-    }
-
-    /* Top Buy Banner */
-    .banner {
-      background-color: #00FF99;
-      color: black;
-      text-align: center;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-    }
-
-    header h1 {
-      font-size: 24px;
-      margin: 0;
-    }
-
-    .header-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      background-color: #00FF99;
-      color: black;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* Trending Green Heading */
-    .trending-heading {
-      background-color: #00FF99;
-      color: black;
-      padding: 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    /* Token list */
-    .token-list {
-      padding: 10px;
-    }
-
-    .token-card {
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .token-card img {
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
-    .token-info h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .token-info p {
-      margin: 2px 0;
-      font-size: 12px;
-      color: #ccc;
-    }
-
-    /* Bottom Navigation */
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #181a1b;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 0;
-      border-top: 1px solid #333;
-    }
-
-    .nav-item {
-      text-align: center;
-      color: white;
-      font-size: 24px;
-    }
-
-    .nav-item img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .green-icon {
-      filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
-    }
-
-  </style>
+  <title>TokenRush</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Buy Banner -->
-  <div class="banner">
-    H3VA2u bought 0.0920 SOL of DARK
+  <!-- Top Sliding Banner -->
+  <div class="sliding-banner">
+    <span>Welcome to TokenRush</span>
+    <span>Create your meme coin</span>
+    <span>Launch Easily</span>
   </div>
 
-  <!-- Header -->
-  <header>
-    <h1>TokenRush</h1>
-    <div class="header-buttons">
-      <button class="btn">Create Token</button>
-      <button class="btn">Log In</button>
+  <!-- Green Header with TokenRush, Create Coin, Login -->
+  <header class="top-header">
+    <div class="logo">TokenRush</div>
+    <div class="buttons">
+      <a href="create.html" class="btn">Create Coin</a>
+      <a href="login.html" class="btn">Login</a>
     </div>
   </header>
 
-  <!-- Trending Tokens Heading -->
-  <div class="trending-heading">Trending Tokens</div>
-
-  <!-- Token Cards -->
-  <div class="token-list">
-    <div class="token-card">
-      <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.png" alt="Shiba">
-      <div class="token-info">
-        <h3>Shiba Inu (SHIB)</h3>
-        <p>Market Cap: $6.8B</p>
-        <p>Replies: 1520</p>
-      </div>
+  <!-- TokenRush logo + subtext -->
+  <div class="logo-section">
+    <img src="tokenrush-logo.png" alt="TokenRush Logo" class="main-logo"/>
+    <div class="slide-subtext">
+      <span>Create your meme coin</span>
+      <span>Launch Easily</span>
     </div>
-    <!-- Add more tokens if needed -->
   </div>
+
+  <!-- Trending Section -->
+  <section class="trending-section">
+    <h2>Trending Tokens</h2>
+    <!-- You can dynamically load tokens here -->
+  </section>
 
   <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav">
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home" /></div>
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="Create" /></div>
-    <div class="nav-item"><img class="green-icon" src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart--v1.png" alt="Chart" /></div>
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/menu-2.png" alt="More" /></div>
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="create.html" class="nav-item">+</a>
+    <a href="community.html" class="nav-item">Chart</a>
+    <a href="more.html" class="nav-item">•••</a>
   </nav>
 
 </body>
