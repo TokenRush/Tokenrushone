@@ -92,7 +92,7 @@ body {
   text-align: center;
 }
 
-.bottom-nav {
+bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
