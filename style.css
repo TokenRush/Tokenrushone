@@ -1,18 +1,56 @@
-/* Body background and font */
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
+  background-color: #013220; /* Dark green background */
+  color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
-/* 3D Sliding Header */
-.slider-text {
-  font-size: 2.2rem;
+/* Top Navigation Bar */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #014421; /* Slightly different dark green for contrast */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.top-nav h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.top-nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #39FF14; /* Neon green */
   font-weight: bold;
+  padding: 8px 12px;
+  border: 1px solid #39FF14;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #39FF14;
+  color: #013220;
+}
+
+/* 3D Sliding Header */
+.slider-container {
   text-align: center;
-  padding: 20px;
+  padding: 30px 10px;
+}
+
+.slider-text {
+  font-size: 2.5rem;
+  font-weight: bold;
   animation: slide 1.5s ease-in-out infinite;
 }
 
@@ -29,40 +67,38 @@ body {
 }
 
 #trending-tokens h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 15px;
-  color: white;
 }
 
-/* Meme Image Styling */
+/* Meme Bottle Image Section */
+#meme-section {
+  text-align: center;
+  padding: 20px;
+}
+
 .meme-image {
-  display: block;
-  width: 90%;
-  max-width: 400px;
-  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
   border-radius: 10px;
 }
 
-/* Bottom Navigation Bar */
+/* Bottom Navigation Bar (Pump.fun style) */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #014421; /* Matching top nav dark green */
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 10px 0;
-  border-top: 1px solid #222;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
   z-index: 1000;
 }
 
-.bottom-nav a {
-  color: #39FF14; /* Neon green */
-  font-size: 1.5rem;
+.nav-icon {
+  color: #39FF14; /* Neon green icons */
+  font-size: 1.8rem;
   text-decoration: none;
-  text-align: center;
-}
-
-.bottom-nav a:hover {
-  opacity: 0.7;
 }
