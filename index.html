@@ -4,101 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TokenRush</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    /* 3D Sliding Header */
-    .slider-text {
-      font-size: 2.2rem;
-      font-weight: bold;
-      text-align: center;
-      padding: 20px;
-      animation: slide 1.5s ease-in-out infinite;
-    }
-
-    @keyframes slide {
-      0% { opacity: 0; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.1); }
-      100% { opacity: 0; transform: scale(0.9); }
-    }
-
-    /* Trending Tokens Section */
-    #trending-tokens {
-      text-align: center;
-      padding: 20px;
-    }
-
-    #trending-tokens h2 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    /* Meme Image */
-    .meme-image {
-      display: block;
-      width: 90%;
-      max-width: 400px;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-
-    /* Bottom Navbar */
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: black;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      border-top: 1px solid #222;
-      z-index: 1000;
-    }
-
-    .bottom-nav a {
-      color: #39FF14; /* Neon green */
-      font-size: 1.5rem;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .bottom-nav a:hover {
-      opacity: 0.7;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top Navigation Bar with Login & Create Token buttons -->
+  <header class="top-nav">
+    <div class="top-nav-left">
+      <h1>TokenRush</h1>
+    </div>
+    <div class="top-nav-right">
+      <a href="#login" class="nav-button">Login</a>
+      <a href="#create-token" class="nav-button">Create Token</a>
+    </div>
+  </header>
 
-  <!-- Header Text -->
-  <div class="slider-text">Welcome to TokenRush</div>
-
-  <!-- Trending Tokens -->
-  <section id="trending-tokens">
-    <h2>Trending Tokens</h2>
-    <!-- You can dynamically add token cards here -->
-  </section>
-
-  <!-- Meme Image -->
-  <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image" />
-
-  <!-- Bottom Navigation Bar -->
-  <div class="bottom-nav">
-    <a href="index.html">⌂</a>
-    <a href="create.html">＋</a>
-    <a href="chart.html">📈</a>
-    <a href="#">⋯</a>
+  <!-- 3D Sliding Header -->
+  <div class="slider-container">
+    <div class="slider-text">Welcome to TokenRush</div>
   </div>
 
-  
+  <!-- Trending Tokens Section -->
+  <section id="trending-tokens">
+    <h2>Trending Tokens</h2>
+    <!-- Token cards can be added here dynamically -->
+  </section>
 
+  <!-- Meme Bottle Image Section -->
+  <section id="meme-section">
+    <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image">
+  </section>
+
+  <!-- Bottom Navigation Bar (Pump.fun style) -->
+  <nav class="bottom-nav">
+    <a href="#home" class="nav-icon">⌂</a>
+    <a href="#create" class="nav-icon">＋</a>
+    <a href="#chart" class="nav-icon">📈</a>
+    <a href="#more" class="nav-icon">⋯</a>
+  </nav>
 </body>
 </html>
-
-<link rel="stylesheet" href="style.css">
