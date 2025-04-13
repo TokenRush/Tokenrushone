@@ -8,59 +8,49 @@
 </head>
 <body>
 
-  <!-- Top Sliding Banner -->
-  <div class="sliding-banner">
-    <span>Welcome to TokenRush</span>
-    <span>Create your meme coin</span>
-    <span>Launch Easily</span>
-  </div>
-
-  <!-- Green Header with TokenRush, Create Coin, Login -->
-  <header class="top-header">
-    <div class="logo">TokenRush</div>
-    <div class="buttons">
-      <a href="create.html" class="btn">Create Coin</a>
-      <a href="login.html" class="btn">Login</a>
-    </div>
-  </header>
-
-  <!-- TokenRush logo + subtext -->
-  <div class="logo-section">
-    <img src="tokenrush-logo.png" alt="TokenRush Logo" class="main-logo"/>
-    <div class="slide-subtext">
-      <span>Create your meme coin</span>
-      <span>Launch Easily</span>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="your-logo-path-here.png" alt="TokenRush Logo" class="logo" />
+    <div class="top-buttons">
+      <button onclick="location.href='create.html'">Create Coin</button>
+      <button onclick="location.href='login.html'">Login</button>
     </div>
   </div>
 
-  <!-- Trending Section -->
-  <section class="trending-section">
-    <h2>Trending Tokens</h2>
-    <!-- You can dynamically load tokens here -->
-  </section>
-  
-<!-- Bottom Navigation Bar -->
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item">
-    <img src="icons/home.svg" alt="Home">
-    <span>Home</span>
-  </a>
-  <a href="create.html" class="nav-item center-plus">
-    <div class="plus-icon">+</div>
-  </a>
-  <a href="community.html" class="nav-item">
-    <img src="icons/chart.svg" alt="Chart">
-    <span>Chart</span>
-  </a>
-  <a href="more.html" class="nav-item">
-    <img src="icons/more.svg" alt="More">
-    <span>More</span>
-  </a>
-</nav>
+  <!-- Header Image -->
+  <div class="header-image">
+    <img src="your-new-meme-coin-image.jpeg" alt="Meme Coin Visual" />
+  </div>
 
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search meme coins...">
+  </div>
+
+  <!-- Trending Tokens -->
+  <div class="tokens-section" id="tokensList">
+    <div class="token-card">Pepe</div>
+    <div class="token-card">Doge</div>
+    <div class="token-card">Shiba</div>
+    <div class="token-card">Frog</div>
+    <div class="token-card">Bonk</div>
+    <div class="token-card">Wen</div>
+    <!-- Add more if needed -->
+  </div>
+
+  <!-- Bottom Nav Bar -->
+  <div class="bottom-nav">
+    <div class="nav-item" onclick="location.href='index.html'">🏠</div>
+    <div class="nav-item plus" onclick="location.href='create.html'">＋</div>
+    <div class="nav-item" onclick="location.href='chart.html'">📊</div>
+    <div class="nav-item" onclick="alert('More features soon')">⋯</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-  <!-- Shiba Inu -->
+
+<!-- Shiba Inu -->
   <div class="token-card" style="display: flex; align-items: center; background-color: #1a1a1a; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
     <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE/logo.png" alt="Shiba Inu Logo" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;" />
     <div style="color: white;">
