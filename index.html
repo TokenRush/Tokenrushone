@@ -8,11 +8,11 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
+      background-color: #000000;
       color: white;
     }
 
-    /* Top Buy Banner */
+    /* Banner */
     .banner {
       background-color: #00FF99;
       color: black;
@@ -22,12 +22,15 @@
     }
 
     /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-    }
+    <!-- Header -->
+<header>
+  <h1>TokenRush</h1>
+  <div class="header-buttons">
+    <button class="btn" onclick="window.location.href='create.html'">Create Token</button>
+    <button class="btn" onclick="window.location.href='login.html'">Log In</button>
+  </div>
+</header>
+  
 
     header h1 {
       font-size: 24px;
@@ -49,7 +52,27 @@
       cursor: pointer;
     }
 
-    /* Trending Green Heading */
+    /* Sliding Welcome Header */
+    .slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 20px 10px;
+    }
+
+    .slider-text {
+      display: inline-block;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #00FF99;
+      animation: slideLeft 4s linear infinite;
+    }
+
+    @keyframes slideLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Trending Tokens Heading */
     .trending-heading {
       background-color: #00FF99;
       color: black;
@@ -58,66 +81,42 @@
       font-weight: bold;
     }
 
-    /* Token list */
-    .token-list {
-      padding: 10px;
+    /* Meme Image Section */
+    .meme-section {
+      text-align: center;
+      padding: 20px;
     }
 
-    .token-card {
-      background-color: #1a1a1a;
+    .meme-image {
+      width: 90%;
+      max-width: 400px;
       border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
     }
 
-    .token-card img {
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
-    .token-info h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .token-info p {
-      margin: 2px 0;
-      font-size: 12px;
-      color: #ccc;
-    }
-
-    /* Bottom Navigation */
+    /* Bottom Navigation Bar */
     .bottom-nav {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #181a1b;
+      background-color: #013220;
       display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 10px 0;
-      border-top: 1px solid #333;
+      border-top: 1px solid #39FF14;
+      z-index: 100;
     }
 
-    .nav-item {
+    .nav-item a {
+      display: inline-block;
       text-align: center;
-      color: white;
-      font-size: 24px;
     }
 
     .nav-item img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .green-icon {
+      width: 26px;
+      height: 26px;
       filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
     }
-
   </style>
 </head>
 <body>
@@ -131,33 +130,30 @@
   <header>
     <h1>TokenRush</h1>
     <div class="header-buttons">
-      <button class="btn">Create Token</button>
-      <button class="btn">Log In</button>
+      <a href="create.html"><button class="btn">Create Token</button></a>
+      <a href="login.html"><button class="btn">Log In</button></a>
     </div>
   </header>
 
-  <!-- Trending Tokens Heading -->
-  <div class="trending-heading">Trending Tokens</div>
-
-  <!-- Token Cards -->
-  <div class="token-list">
-    <div class="token-card">
-      <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.png" alt="Shiba">
-      <div class="token-info">
-        <h3>Shiba Inu (SHIB)</h3>
-        <p>Market Cap: $6.8B</p>
-        <p>Replies: 1520</p>
-      </div>
-    </div>
-    <!-- Add more tokens if needed -->
+  <!-- Sliding Welcome Header -->
+  <div class="slider-container">
+    <div class="slider-text">Welcome to TokenRush - Create your meme coin easily!</div>
   </div>
 
-  <!-- Bottom Navigation Bar -->
+  <!-- Trending Heading -->
+  <div class="trending-heading">Trending Tokens</div>
+
+  <!-- Meme Image -->
+  <div class="meme-section">
+    <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image">
+  </div>
+
+  <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home" /></div>
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="Create" /></div>
-    <div class="nav-item"><img class="green-icon" src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart--v1.png" alt="Chart" /></div>
-    <div class="nav-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/menu-2.png" alt="More" /></div>
+    <div class="nav-item"><a href="index.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home" /></a></div>
+    <div class="nav-item"><a href="create.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="Create" /></a></div>
+    <div class="nav-item"><a href="chart.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart--v1.png" alt="Chart" /></a></div>
+    <div class="nav-item"><a href="more.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/menu-2.png" alt="More" /></a></div>
   </nav>
 
 </body>
