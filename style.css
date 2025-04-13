@@ -1,87 +1,100 @@
-/* Basic reset and styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-
-header {
-    position: relative;
-    height: 200px;
-    background: #333;
-}
-
-.slider-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    text-align: center;
-    animation: slide 2s ease-in-out infinite;
-}
-
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TokenRush</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
     }
-    50% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
+
+    /* 3D Sliding Header */
+    .slider-text {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      animation: slide 1.5s ease-in-out infinite;
     }
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
+
+    @keyframes slide {
+      0% { opacity: 0; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(0.9); }
     }
-}
 
-.navbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-}
+    /* Trending Tokens Section */
+    #trending-tokens {
+      text-align: center;
+      padding: 20px;
+    }
 
-.navbar a {
-    color: neon green;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
+    #trending-tokens h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: white;
+    }
 
-#trending-tokens {
-    margin: 20px;
-    text-align: center;
-}
+    /* Meme Image */
+    .meme-image {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
 
-.token-card {
-    display: inline-block;
-    width: 150px;
-    margin: 10px;
-    background: #444;
-    padding: 15px;
-    border-radius: 10px;
-}
+    /* Bottom Navbar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #222;
+      z-index: 1000;
+    }
 
-.token-card img {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 0 auto 10px;
-}
+    .bottom-nav a {
+      color: #39FF14; /* Neon green */
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-align: center;
+    }
 
-.meme-image {
-    display: block;
-    max-width: 100%;
-    margin: 20px auto;
-}
+    .bottom-nav a:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-}
+  <!-- Header Text -->
+  <div class="slider-text">Welcome to TokenRush</div>
+
+  <!-- Trending Tokens -->
+  <section id="trending-tokens">
+    <h2>Trending Tokens</h2>
+    <!-- You can dynamically add token cards here -->
+  </section>
+
+  <!-- Meme Image -->
+  <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image" />
+
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="index.html">⌂</a>
+    <a href="create.html">＋</a>
+    <a href="chart.html">📈</a>
+    <a href="#">⋯</a>
+  </div>
+
+</body>
+</html>
