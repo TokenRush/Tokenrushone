@@ -1,111 +1,85 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
+  background-color: #001F1F;
+  font-family: Arial, sans-serif;
   color: white;
 }
 
-.sliding-banner {
-  background: #00ff99;
-  color: #000;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: slideText 12s linear infinite;
-}
-
-@keyframes slideText {
-  0% { transform: translateX(0%); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
-}
-
-.sliding-banner span {
-  display: inline-block;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.top-header {
+.top-bar {
+  background-color: #003333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #00cc66;
-  padding: 10px 15px;
+  padding: 12px 16px;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+  height: 40px;
 }
 
-.buttons .btn {
-  background: black;
-  color: #00ff99;
-  border: 1px solid #00ff99;
-  padding: 6px 14px;
-  border-radius: 4px;
+.top-buttons button {
   margin-left: 10px;
-  text-decoration: none;
+  background-color: #00FF99;
+  border: none;
+  padding: 8px 12px;
+  color: #001F1F;
   font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.logo-section {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.main-logo {
-  width: 80px;
-  height: 80px;
-}
-
-.slide-subtext span {
+.header-image img {
+  width: 100%;
+  height: auto;
   display: block;
-  font-size: 18px;
-  color: #00ff99;
-  animation: subSlide 6s linear infinite;
 }
 
-@keyframes subSlide {
-  0%, 33% { opacity: 1; }
-  34%, 66% { opacity: 0; }
-  67%, 100% { opacity: 1; }
-}
-
-.trending-section {
-  padding: 10px 15px;
-  background: #111;
-  margin-top: 20px;
-}
-
-.trending-section h2 {
-  background: #00cc66;
-  padding: 10px;
-  margin: 0;
-  color: black;
-  font-weight: bold;
+.search-container {
+  padding: 16px;
   text-align: center;
 }
 
-bottom-nav {
+#searchInput {
+  padding: 10px;
+  width: 90%;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.tokens-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.token-card {
+  background-color: #004d4d;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #111;
+  background-color: #002d2d;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
-  border-top: 1px solid #00ff99;
+  align-items: center;
+  padding: 12px 0;
+  color: #00FF99;
+  font-size: 24px;
 }
 
-.bottom-nav .nav-item {
-  color: #00ff99;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+.nav-item {
+  cursor: pointer;
+}
+
+.plus {
+  font-size: 32px;
+  color: #00FF99;
 }
