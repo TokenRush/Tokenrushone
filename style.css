@@ -1,18 +1,17 @@
-/* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  background-color: #013220; /* Dark green background */
+  background-color: #013220;
   color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
-/* Top Navigation Bar */
+/* Top Navigation */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #014421; /* Slightly different dark green for contrast */
+  background-color: #014421;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -29,7 +28,7 @@ body {
 
 .nav-button {
   text-decoration: none;
-  color: #39FF14; /* Neon green */
+  color: #39FF14;
   font-weight: bold;
   padding: 8px 12px;
   border: 1px solid #39FF14;
@@ -42,7 +41,7 @@ body {
   color: #013220;
 }
 
-/* 3D Sliding Header */
+/* Slider */
 .slider-container {
   text-align: center;
   padding: 30px 10px;
@@ -60,7 +59,7 @@ body {
   100% { opacity: 0; transform: scale(0.9); }
 }
 
-/* Trending Tokens Section */
+/* Trending Section */
 #trending-tokens {
   text-align: center;
   padding: 20px;
@@ -71,7 +70,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Meme Bottle Image Section */
+/* Meme Image */
 #meme-section {
   text-align: center;
   padding: 20px;
@@ -83,12 +82,12 @@ body {
   border-radius: 10px;
 }
 
-/* Bottom Navigation Bar (Pump.fun style) */
+/* Bottom Navigation */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #014421; /* Matching top nav dark green */
+  background-color: #014421;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -98,7 +97,7 @@ body {
 }
 
 .nav-icon {
-  color: #39FF14; /* Neon green icons */
+  color: #39FF14;
   font-size: 1.8rem;
   text-decoration: none;
 }
