@@ -1,103 +1,23 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #013220;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-}
-
-/* Top Navigation */
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #014421;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.top-nav h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.top-nav-right {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-button {
-  text-decoration: none;
-  color: #39FF14;
-  font-weight: bold;
-  padding: 8px 12px;
-  border: 1px solid #39FF14;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: #39FF14;
-  color: #013220;
-}
-
-/* Slider */
-.slider-container {
-  text-align: center;
-  padding: 30px 10px;
-}
-
-.slider-text {
-  font-size: 2.5rem;
-  font-weight: bold;
-  animation: slide 1.5s ease-in-out infinite;
-}
-
-@keyframes slide {
-  0% { opacity: 0; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.1); }
-  100% { opacity: 0; transform: scale(0.9); }
-}
-
-/* Trending Section */
-#trending-tokens {
-  text-align: center;
-  padding: 20px;
-}
-
-#trending-tokens h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-/* Meme Image */
-#meme-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.meme-image {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Bottom Navigation */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #014421;
+  background-color: #00FF99; /* Same as banner & button */
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
-  z-index: 1000;
+  border-top: 1px solid #333;
 }
 
-.nav-icon {
-  color: #39FF14;
-  font-size: 1.8rem;
-  text-decoration: none;
+.nav-item {
+  text-align: center;
+  color: black; /* Dark text on green background */
+  font-size: 24px;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%); /* to match icon color */
 }
