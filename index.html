@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TokenRush</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
 
+    /* 3D Sliding Header */
+    .slider-text {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      animation: slide 1.5s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+      0% { opacity: 0; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(0.9); }
+    }
+
+    /* Trending Tokens Section */
+    #trending-tokens {
+      text-align: center;
+      padding: 20px;
+    }
+
+    #trending-tokens h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    /* Meme Image */
+    .meme-image {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+
+    /* Bottom Navbar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #222;
+      z-index: 1000;
+    }
+
+    .bottom-nav a {
+      color: #39FF14; /* Neon green */
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .bottom-nav a:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Text -->
+  <div class="slider-text">Welcome to TokenRush</div>
+
+  <!-- Trending Tokens -->
+  <section id="trending-tokens">
+    <h2>Trending Tokens</h2>
+    <!-- You can dynamically add token cards here -->
+  </section>
+
+  <!-- Meme Image -->
+  <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image" />
+
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="index.html">⌂</a>
+    <a href="create.html">＋</a>
+    <a href="chart.html">📈</a>
+    <a href="#">⋯</a>
+  </div>
+
+</body>
+</html>
