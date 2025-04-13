@@ -1,85 +1,87 @@
+/* Basic reset and styling */
 body {
-  margin: 0;
-  background-color: #001F1F;
-  font-family: Arial, sans-serif;
-  color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-.top-bar {
-  background-color: #003333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
+header {
+    position: relative;
+    height: 200px;
+    background: #333;
 }
 
-.logo {
-  height: 40px;
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    text-align: center;
+    animation: slide 2s ease-in-out infinite;
 }
 
-.top-buttons button {
-  margin-left: 10px;
-  background-color: #00FF99;
-  border: none;
-  padding: 8px 12px;
-  color: #001F1F;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 }
 
-.header-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
 }
 
-.search-container {
-  padding: 16px;
-  text-align: center;
+.navbar a {
+    color: neon green;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-#searchInput {
-  padding: 10px;
-  width: 90%;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-}
-
-.tokens-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px;
+#trending-tokens {
+    margin: 20px;
+    text-align: center;
 }
 
 .token-card {
-  background-color: #004d4d;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+    background: #444;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #002d2d;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 12px 0;
-  color: #00FF99;
-  font-size: 24px;
+.token-card img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
 }
 
-.nav-item {
-  cursor: pointer;
+.meme-image {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
 }
 
-.plus {
-  font-size: 32px;
-  color: #00FF99;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
 }
