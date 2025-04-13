@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TokenRush</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenRush</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: black;">
 
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <img src="your-logo-path-here.png" alt="TokenRush Logo" class="logo" />
-    <div class="top-buttons">
-      <button onclick="location.href='create.html'">Create Coin</button>
-      <button onclick="location.href='login.html'">Login</button>
-    </div>
-  </div>
+    <!-- 3D sliding header -->
+    <header>
+        <div class="header-content">
+            <h1 class="slider-text">Welcome to TokenRush</h1>
+        </div>
+    </header>
 
-  <!-- Header Image -->
-  <div class="header-image">
-    <img src="your-new-meme-coin-image.jpeg" alt="Meme Coin Visual" />
-  </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#create-token">+</a></li>
+            <li><a href="#chart">Chart</a></li>
+            <li><a href="#more">...</a></li>
+        </ul>
+    </nav>
 
-  <!-- Search Bar -->
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search meme coins...">
-  </div>
+    <!-- Trending Tokens Section -->
+    <section id="trending-tokens">
+        <h2>Trending Tokens</h2>
+        <!-- Add trending tokens here -->
+        <div class="tokens">
+            <!-- Example tokens -->
+            <div class="token-card">
+                <img src="pepe-logo.png" alt="Pepe">
+                <p>Pepe Coin</p>
+            </div>
+            <div class="token-card">
+                <img src="doge-logo.png" alt="Doge">
+                <p>Doge Coin</p>
+            </div>
+            <!-- Add more tokens as needed -->
+        </div>
+    </section>
 
-  <!-- Trending Tokens -->
-  <div class="tokens-section" id="tokensList">
-    <div class="token-card">Pepe</div>
-    <div class="token-card">Doge</div>
-    <div class="token-card">Shiba</div>
-    <div class="token-card">Frog</div>
-    <div class="token-card">Bonk</div>
-    <div class="token-card">Wen</div>
-    <!-- Add more if needed -->
-  </div>
+    <!-- Meme Bottle Image Section -->
+    <section id="meme-image">
+        <img src="meme-bottle.png" alt="Meme Coin Bottle" class="meme-image">
+    </section>
 
-  <!-- Bottom Nav Bar -->
-  <div class="bottom-nav">
-    <div class="nav-item" onclick="location.href='index.html'">🏠</div>
-    <div class="nav-item plus" onclick="location.href='create.html'">＋</div>
-    <div class="nav-item" onclick="location.href='chart.html'">📊</div>
-    <div class="nav-item" onclick="alert('More features soon')">⋯</div>
-  </div>
+    <!-- Footer Section (Optional) -->
+    <footer>
+        <p>TokenRush © 2025</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <!-- JavaScript to control the 3D header animation speed -->
+    <script>
+        const headerText = document.querySelector(".slider-text");
+        headerText.style.animationDuration = "2s"; // Adjust speed as needed
+    </script>
 </body>
 </html>
-
-<script src="script.js"></script>
 
 <!-- Shiba Inu -->
   <div class="token-card" style="display: flex; align-items: center; background-color: #1a1a1a; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
