@@ -3,143 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DogeKing | TokenRush</title>
+  <title>Token Details - TokenRush</title>
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: black;
       color: white;
-      font-family: Arial, sans-serif;
     }
 
-    .back-btn {
-      display: inline-block;
-      margin: 10px;
-      color: #00ff99;
-      text-decoration: none;
+    .header {
+      background-color: #00FF99;
+      color: black;
+      padding: 15px;
+      font-size: 20px;
       font-weight: bold;
-    }
-
-    .token-name {
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: #00ff99;
-      margin-top: 10px;
     }
 
-    .chart-section {
-      width: 90%;
-      height: 300px;
-      margin: 20px auto;
-      background-color: #111;
-      border: 1px solid #00ff99;
-      border-radius: 10px;
+    .chart-container {
       text-align: center;
-      padding-top: 100px;
-      color: #999;
-    }
-
-    .trade-box {
-      width: 90%;
-      margin: 20px auto;
-      background-color: #111;
-      border: 1px solid #00ff99;
-      border-radius: 10px;
       padding: 20px;
     }
 
-    .trade-box label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
+    .chart-placeholder {
+      background-color: #111;
+      border: 2px solid #00FF99;
+      height: 200px;
+      width: 90%;
+      margin: auto;
+      border-radius: 10px;
     }
 
-    .trade-box input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
-      border: 1px solid #00ff99;
+    .actions {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .actions input {
+      padding: 10px;
+      margin: 5px;
+      width: 60%;
       border-radius: 5px;
-      background: black;
-      color: white;
+      border: none;
     }
 
     .btn {
-      width: 48%;
-      padding: 10px;
-      margin: 5px 1%;
-      background-color: #00ff99;
+      padding: 10px 20px;
+      background-color: #00FF99;
       border: none;
-      color: black;
+      border-radius: 6px;
+      margin: 10px 5px;
       font-weight: bold;
+      color: black;
       cursor: pointer;
-      border-radius: 5px;
     }
 
     .stats {
-      margin-top: 15px;
       text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
     }
 
-    .stats p {
-      margin: 6px 0;
-      color: #aaa;
+    .back-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn a {
+      color: #00FF99;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .actions input {
+        width: 80%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <a href="index.html" class="back-btn">&larr; Back to Home</a>
+  <div class="header">TokenRush - Meme Coin Details</div>
 
-  <div class="token-name">DogeKing</div>
-
-  <div class="chart-section">
-    [Real-time chart will display here...]
-  </div>
-
-  <div class="trade-box">
-    <label for="lot">Buy Lots</label>
-    <input type="number" id="lot" placeholder="Enter lot count" />
-
-    <div>
-      <button class="btn" onclick="buy()">Buy</button>
-      <button class="btn" onclick="sell()">Sell</button>
-    </div>
-
-    <div class="stats" id="stats">
-      <p>Buyers: 0</p>
-      <p>Sellers: 0</p>
+  <div class="chart-container">
+    <div class="chart-placeholder">
+      <!-- You can embed TradingView widget or DEX chart here -->
+      <p style="padding-top: 90px;">Live Chart (Coming Soon)</p>
     </div>
   </div>
 
-  <script>
-    let buyers = 0;
-    let sellers = 0;
+  <div class="actions">
+    <input type="number" placeholder="Enter Lot Size" />
+    <br/>
+    <button class="btn">Buy</button>
+    <button class="btn">Sell</button>
+  </div>
 
-    function buy() {
-      const lot = document.getElementById('lot').value;
-      if (lot && lot > 0) {
-        buyers += parseInt(lot);
-        updateStats();
-      }
-    }
+  <div class="stats">
+    <p><strong>102</strong> users bought</p>
+    <p><strong>45</strong> users sold</p>
+  </div>
 
-    function sell() {
-      const lot = document.getElementById('lot').value;
-      if (lot && lot > 0) {
-        sellers += parseInt(lot);
-        updateStats();
-      }
-    }
-
-    function updateStats() {
-      document.getElementById("stats").innerHTML = `
-        <p>Buyers: ${buyers}</p>
-        <p>Sellers: ${sellers}</p>
-      `;
-    }
-  </script>
+  <div class="back-btn">
+    <a href="index.html">← Back to Home</a>
+  </div>
 
 </body>
 </html>
