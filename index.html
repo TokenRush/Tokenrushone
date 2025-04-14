@@ -3,150 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Create Token</title>
+  <title>TokenRush - Pump.fun Clone</title>
   <style>
     body {
-      background-color: #0d1117;
-      font-family: Arial, sans-serif;
-      color: white;
       margin: 0;
-      padding-bottom: 60px;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: white;
     }
-    .header {
-      background-color: #00FF00;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    .header a {
+
+    /* Banner */
+    .banner {
+      background-color: #00FF99;
       color: black;
-      text-decoration: none;
-      font-weight: bold;
-      margin-left: auto;
-    }
-    .form-container {
-      max-width: 500px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
-      color: #58a6ff;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      background-color: #161b22;
-      color: white;
-      border: 1px solid #30363d;
-      border-radius: 5px;
-    }
-    .upload-box {
-      border: 2px dashed #30363d;
       text-align: center;
-      padding: 30px 10px;
-      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
     }
-    .upload-box input {
-      display: none;
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
     }
-    .upload-box label {
-      cursor: pointer;
-      color: #58a6ff;
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
     }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
     .btn {
-      background-color: #1f6feb;
-      color: white;
-      padding: 10px 20px;
+      background-color: #00FF99;
+      color: black;
       border: none;
-      margin-top: 20px;
-      width: 100%;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
     }
-    #more-options {
-      display: none;
-      margin-top: 20px;
+
+    /* Sliding Welcome Header */
+    .slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 20px 10px;
     }
-    #more-options label {
-      color: #4ea1f3;
+
+    .slider-text {
+      display: inline-block;
+      font-size: 2.2rem;
       font-weight: bold;
+      color: #00FF99;
+      animation: slideLeft 4s linear infinite;
+    }
+
+    @keyframes slideLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Trending Tokens Heading */
+    .trending-heading {
+      background-color: #00FF99;
+      color: black;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Meme Image Section */
+    .meme-section {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .meme-image {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #013220;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #39FF14;
+      z-index: 100;
+    }
+
+    .nav-item a {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .nav-item img {
+      width: 26px;
+      height: 26px;
+      filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
     }
   </style>
 </head>
 <body>
 
+  <!-- Buy Banner -->
+  <div class="banner">
+    H3VA2u bought 0.0920 SOL of DARK
+  </div>
+
   <!-- Header -->
-  <div class="header">
-    <a href="login.html">Login</a>
-  </div>
-
-  <!-- Form -->
-  <div class="form-container">
-    <h2>Create Token</h2>
-
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter token name" />
-
-    <label for="ticker">Ticker</label>
-    <input type="text" id="ticker" placeholder="$" />
-
-    <label for="description">Description</label>
-    <textarea id="description" rows="4" placeholder="Enter token description"></textarea>
-
-    <label for="image">Image or Video</label>
-    <div class="upload-box">
-      <label for="file-upload">drag and drop an image or video<br><br>
-        <span style="background:#000;border:1px solid white;padding:6px 15px;border-radius:5px;">select file</span>
-      </label>
-      <input id="file-upload" type="file" />
+  <header>
+    <h1>TokenRush</h1>
+    <div class="header-buttons">
+      <a href="create.html"><button class="btn">Create Token</button></a>
+      <a href="login.html"><button class="btn">Log In</button></a>
     </div>
+  </header>
 
-    <p id="toggle-options" style="cursor: pointer; color: #4DA3FF; text-align: center;">show more options ↓</p>
-
-    <div id="more-options">
-      <label>Telegram link</label>
-      <input type="text" placeholder="(optional)" />
-
-      <label>Website link</label>
-      <input type="text" placeholder="(optional)" />
-
-      <label>Twitter or X link</label>
-      <input type="text" placeholder="(optional)" />
-
-      <p style="color: gray; font-size: 12px; margin-top: 10px;">
-        tip: coin data cannot be changed after creation
-      </p>
-    </div>
-
-    <button class="btn">Create Token</button>
+  <!-- Sliding Welcome Header -->
+  <div class="slider-container">
+    <div class="slider-text">Welcome to TokenRush - Create your meme coin easily!</div>
   </div>
 
-  <!-- Bottom nav -->
-  <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #003300; display: flex; justify-content: space-around; align-items: center; padding: 10px 0;">
-    <a href="index.html" style="color: #00ff99;">Home</a>
-    <a href="page2.html" style="color: #00ff99; font-size: 24px;">+</a>
-    <a href="chart.html" style="color: #00ff99;">Chart</a>
-    <a href="#" style="color: #00ff99;">More</a>
+  <!-- Trending Heading -->
+  <div class="trending-heading">Trending Tokens</div>
+
+  <!-- Meme Image -->
+  <div class="meme-section">
+    <img src="meme-bottle.png" alt="Meme Bottle" class="meme-image">
   </div>
 
-  <!-- JS for toggle -->
-  <script>
-    const toggleBtn = document.getElementById("toggle-options");
-    const moreOptions = document.getElementById("more-options");
-    let isVisible = false;
-
-    toggleBtn.addEventListener("click", () => {
-      isVisible = !isVisible;
-      moreOptions.style.display = isVisible ? "block" : "none";
-      toggleBtn.innerText = isVisible ? "hide more options ↑" : "show more options ↓";
-    });
-  </script>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <div class="nav-item"><a href="index.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home" /></a></div>
+    <div class="nav-item"><a href="create.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="Create" /></a></div>
+    <div class="nav-item"><a href="chart.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart--v1.png" alt="Chart" /></a></div>
+    <div class="nav-item"><a href="more.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/menu-2.png" alt="More" /></a></div>
+  </nav>
 
 </body>
 </html>
