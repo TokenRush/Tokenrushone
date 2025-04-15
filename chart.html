@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Token Market</title>
+  <title>Token तपशील - TokenRush</title>
   <style>
     body {
       margin: 0;
@@ -14,57 +14,96 @@
 
     .header {
       background-color: #00FF99;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header a {
       color: black;
-      padding: 15px;
       font-weight: bold;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .token-info {
+      padding: 20px;
       text-align: center;
     }
 
-    .token-list {
-      padding: 20px;
-    }
-
-    .token-item {
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #00FF99;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .token-details {
-      display: none;
-      background-color: #111;
-      padding: 20px;
-      border-top: 2px solid #00FF99;
-    }
-
-    .chart {
-      height: 200px;
-      background-color: #222;
-      margin-bottom: 20px;
-      text-align: center;
-      line-height: 200px;
+    .token-info h2 {
+      margin: 0;
+      font-size: 26px;
       color: #00FF99;
     }
 
-    .buy-sell {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 20px;
+    .token-info p {
+      margin-top: 5px;
+      color: gray;
     }
 
-    .buy-sell button {
-      background-color: #00FF99;
+    .chart {
+      margin: 20px;
+      background-color: #111;
+      height: 200px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: gray;
+    }
+
+    .trade-section {
+      padding: 20px;
+    }
+
+    .trade-section h3 {
+      margin-bottom: 10px;
+      color: #00FF99;
+    }
+
+    .trade-section input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #161b22;
+      color: white;
+      border: 1px solid #30363d;
+      border-radius: 5px;
+    }
+
+    .trade-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buy-btn, .sell-btn {
+      flex: 1;
+      padding: 12px;
       border: none;
-      padding: 10px 20px;
-      color: black;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    .footer {
+    .buy-btn {
+      background-color: #00FF99;
+      color: black;
+    }
+
+    .sell-btn {
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    .stats {
+      padding: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .bottom-nav {
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -74,44 +113,59 @@
       padding: 10px 0;
     }
 
-    .footer img {
-      width: 24px;
-      height: 24px;
+    .nav-item img {
+      width: 26px;
+      height: 26px;
       filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
     }
   </style>
 </head>
 <body>
 
-  <div class="header">TokenRush - Market</div>
-
-  <div class="token-list">
-    <div class="token-item" onclick="showDetails('MRUSH')">MemeRush (MRUSH)</div>
-    <div class="token-item" onclick="showDetails('DOGE2')">DogeClone (DOGE2)</div>
-  </div>
-
-  <div class="token-details" id="token-details">
-    <h2 id="token-name">Token Name</h2>
-    <div class="chart">[Real-Time Chart Placeholder]</div>
-    <div class="buy-sell">
-      <button onclick="alert('Buy order placed')">Buy</button>
-      <button onclick="alert('Sell order placed')">Sell</button>
+  <!-- Header -->
+  <div class="header">
+    <div><strong>TokenRush</strong></div>
+    <div>
+      <a href="create-token.html">टोकन तयार करा</a>
+      <a href="login.html">लॉगिन</a>
     </div>
-    <p><strong>Buyers:</strong> 12 | <strong>Sellers:</strong> 8</p>
   </div>
 
-  <div class="footer">
-    <a href="index.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/home.png" alt="Home" /></a>
-    <a href="create-token.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/plus-math.png" alt="Create" /></a>
-    <a href="market.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/combo-chart--v1.png" alt="Market" /></a>
-    <a href="#"><img src="https://img.icons8.com/ios-filled/24/00ff00/menu-2.png" alt="More" /></a>
+  <!-- Token Info -->
+  <div class="token-info">
+    <h2>मेमेरश (MRUSH)</h2>
+    <p>मजेशीर नाणं - समुदायासाठी!</p>
   </div>
 
-  <script>
-    function showDetails(token) {
-      document.getElementById('token-details').style.display = 'block';
-      document.getElementById('token-name').innerText = token;
-    }
-  </script>
+  <!-- Real-time Chart -->
+  <div class="chart">
+    [Live Chart येथे दिसेल]
+  </div>
+
+  <!-- Buy/Sell Section -->
+  <div class="trade-section">
+    <h3>खरेदी / विक्री</h3>
+    <input type="number" placeholder="लॉट्स टाका (उदा. 10)" />
+    <div class="trade-buttons">
+      <button class="buy-btn">खरेदी करा</button>
+      <button class="sell-btn">विक्री करा</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    खरेदीदार: 128<br/>
+    विक्रेते: 45<br/>
+    एकूण व्यवहार: ₹5,32,000
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav">
+    <div class="nav-item"><a href="index.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/home.png" alt="Home" /></a></div>
+    <div class="nav-item"><a href="create-token.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/plus-math.png" alt="Create" /></a></div>
+    <div class="nav-item"><a href="chart.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/combo-chart--v1.png" alt="Chart" /></a></div>
+    <div class="nav-item"><a href="#"><img src="https://img.icons8.com/ios-filled/24/00ff00/menu-2.png" alt="More" /></a></div>
+  </nav>
+
 </body>
 </html>
