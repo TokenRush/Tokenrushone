@@ -3,112 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Token Details - TokenRush</title>
+  <title>Token Market</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
+      background-color: #000;
       color: white;
+      font-family: Arial, sans-serif;
     }
 
     .header {
       background-color: #00FF99;
       color: black;
       padding: 15px;
-      font-size: 20px;
       font-weight: bold;
       text-align: center;
     }
 
-    .chart-container {
-      text-align: center;
+    .token-list {
       padding: 20px;
     }
 
-    .chart-placeholder {
-      background-color: #111;
-      border: 2px solid #00FF99;
-      height: 200px;
-      width: 90%;
-      margin: auto;
-      border-radius: 10px;
-    }
-
-    .actions {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .actions input {
+    .token-item {
       padding: 10px;
-      margin: 5px;
-      width: 60%;
+      margin: 10px 0;
+      border: 1px solid #00FF99;
       border-radius: 5px;
-      border: none;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      background-color: #00FF99;
-      border: none;
-      border-radius: 6px;
-      margin: 10px 5px;
-      font-weight: bold;
-      color: black;
       cursor: pointer;
     }
 
-    .stats {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 16px;
+    .token-details {
+      display: none;
+      background-color: #111;
+      padding: 20px;
+      border-top: 2px solid #00FF99;
     }
 
-    .back-btn {
+    .chart {
+      height: 200px;
+      background-color: #222;
+      margin-bottom: 20px;
       text-align: center;
-      margin-top: 30px;
-    }
-
-    .back-btn a {
+      line-height: 200px;
       color: #00FF99;
-      text-decoration: underline;
-      font-weight: bold;
     }
 
-    @media (max-width: 600px) {
-      .actions input {
-        width: 80%;
-      }
+    .buy-sell {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .buy-sell button {
+      background-color: #00FF99;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #003300;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .footer img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) saturate(100%) invert(72%) sepia(49%) saturate(468%) hue-rotate(87deg) brightness(104%) contrast(101%);
     }
   </style>
 </head>
 <body>
 
-  <div class="header">TokenRush - Meme Coin Details</div>
+  <div class="header">TokenRush - Market</div>
 
-  <div class="chart-container">
-    <div class="chart-placeholder">
-      <!-- You can embed TradingView widget or DEX chart here -->
-      <p style="padding-top: 90px;">Live Chart (Coming Soon)</p>
+  <div class="token-list">
+    <div class="token-item" onclick="showDetails('MRUSH')">MemeRush (MRUSH)</div>
+    <div class="token-item" onclick="showDetails('DOGE2')">DogeClone (DOGE2)</div>
+  </div>
+
+  <div class="token-details" id="token-details">
+    <h2 id="token-name">Token Name</h2>
+    <div class="chart">[Real-Time Chart Placeholder]</div>
+    <div class="buy-sell">
+      <button onclick="alert('Buy order placed')">Buy</button>
+      <button onclick="alert('Sell order placed')">Sell</button>
     </div>
+    <p><strong>Buyers:</strong> 12 | <strong>Sellers:</strong> 8</p>
   </div>
 
-  <div class="actions">
-    <input type="number" placeholder="Enter Lot Size" />
-    <br/>
-    <button class="btn">Buy</button>
-    <button class="btn">Sell</button>
+  <div class="footer">
+    <a href="index.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/home.png" alt="Home" /></a>
+    <a href="create-token.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/plus-math.png" alt="Create" /></a>
+    <a href="market.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/combo-chart--v1.png" alt="Market" /></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/24/00ff00/menu-2.png" alt="More" /></a>
   </div>
 
-  <div class="stats">
-    <p><strong>102</strong> users bought</p>
-    <p><strong>45</strong> users sold</p>
-  </div>
-
-  <div class="back-btn">
-    <a href="index.html">← Back to Home</a>
-  </div>
-
+  <script>
+    function showDetails(token) {
+      document.getElementById('token-details').style.display = 'block';
+      document.getElementById('token-name').innerText = token;
+    }
+  </script>
 </body>
 </html>
