@@ -133,11 +133,11 @@
 
   <!-- Token Info -->
   <div class="token-info">
-    <h2>MemeRush (MRUSH)</h2>
-    <p>Fun token for the community!</p>
+    <h2 id="token-name">Token Name</h2>
+    <p id="token-symbol">Symbol</p>
   </div>
 
-  <!-- Real-time Chart -->
+  <!-- Chart Placeholder -->
   <div class="chart">
     [Live Chart will appear here]
   </div>
@@ -156,7 +156,7 @@
   <div class="stats">
     Buyers: 128<br/>
     Sellers: 45<br/>
-    Total Trades: ₹532,000
+    Total Volume: ₹5,32,000
   </div>
 
   <!-- Bottom Navigation -->
@@ -166,6 +166,16 @@
     <div class="nav-item"><a href="chart.html"><img src="https://img.icons8.com/ios-filled/24/00ff00/combo-chart--v1.png" alt="Chart" /></a></div>
     <div class="nav-item"><a href="#"><img src="https://img.icons8.com/ios-filled/24/00ff00/menu-2.png" alt="More" /></a></div>
   </nav>
+
+  <!-- Script to read token name & symbol from URL -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name') || 'Token Name';
+    const symbol = urlParams.get('symbol') || 'SYMBOL';
+
+    document.getElementById('token-name').innerText = name;
+    document.getElementById('token-symbol').innerText = `Symbol: ${symbol}`;
+  </script>
 
 </body>
 </html>
